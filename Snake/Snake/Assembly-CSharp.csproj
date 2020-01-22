@@ -82,8 +82,10 @@
     <Compile Include="Assets\Scripts\Loader.cs" />
     <Compile Include="Assets\Scripts\LoaderCallback.cs" />
     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
+    <Compile Include="Assets\Scripts\Score.cs" />
     <Compile Include="Assets\Scripts\ScoreWindow.cs" />
     <Compile Include="Assets\Scripts\SnakeMovement.cs" />
+    <Compile Include="Assets\Scripts\SoundsManager.cs" />
     <None Include="Assets\CodeMonkey\README.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Margaux/Documents/Unity/FirstGame/Snake/Snake/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

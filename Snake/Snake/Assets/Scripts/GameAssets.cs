@@ -18,4 +18,6 @@ public class GameAssets : MonoBehaviour
     public Sprite poussinG;
     public Sprite poussinD;
     public Sprite snakeFoodSprite;
+
+    public AudioClip chickenMoves;
 }

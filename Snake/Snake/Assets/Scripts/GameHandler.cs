@@ -18,6 +18,7 @@ public class GameHandler : MonoBehaviour
     {
         instance = this;
         InitializeScore();
+        Time.timeScale = 1f;
     }
 
     private void Start()
@@ -45,6 +46,7 @@ public class GameHandler : MonoBehaviour
 
     public static void SnakeDied()
     {
+        Score.updateHighscore(score);
         GameOverWindow.ShowStatic();
     }
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using CodeMonkey;
 using CodeMonkey.Utils;
+using System;
 
 public class SnakeMovement : MonoBehaviour
 {
@@ -63,6 +64,15 @@ public class SnakeMovement : MonoBehaviour
                 break;
             case State.Dead:
                 break;
+        }
+    }
+
+    private void OnGUI()
+    {
+        Event e = Event.current;
+        if (e.isKey)
+        {
+            Debug.Log("Detected key code: " + e.keyCode);
         }
     }
 
@@ -128,6 +138,19 @@ public class SnakeMovement : MonoBehaviour
 
     private void HandleGridMovement()
     {
+        //Play sound
+        SoundsManager.PlaySound();
+
+        //Vitesse change
+        if (snakeBodySize == 5)
+        {
+            gridMoveTimerMax = .15f;
+        }
+        if (snakeBodySize == 10)
+        {
+            gridMoveTimerMax = .1f;
+        }
+
         gridMoveTimer += Time.deltaTime;
         if (gridMoveTimer >= gridMoveTimerMax)
         {
