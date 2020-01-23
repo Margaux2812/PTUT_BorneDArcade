@@ -2,12 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class SoundsManager
+public class SoundsManager : MonoBehaviour
 {
-    public static void PlaySound()
+    static AudioSource audioSource;
+
+    public enum Sound
     {
-        //GameObject soundGameObject = new GameObject("Sound");
-        //AudioSource audoiSource = soundGameObject.AddComponent<AudioSource>();
-        //AudioSource.PlayOneShot(GameAssets.instance.chickenMoves);
+        gotEgg,
+        Moves,
+        gameOver
+    }
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    public static void PlaySound(Sound sound)
+    {
+        audioSource.PlayOneShot(GetAudioClip(sound));
+    }
+
+    private static AudioClip GetAudioClip(Sound sound)
+    {
+        foreach(GameAssets.SoundAudioClip soundAudioClip in GameAssets.instance.soundAudioClips)
+        {
+            if(soundAudioClip.sound == sound)
+            {
+                return soundAudioClip.audioClip;
+            }
+        }
+
+        return null;
     }
 }

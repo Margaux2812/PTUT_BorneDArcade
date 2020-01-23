@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -19,5 +20,12 @@ public class GameAssets : MonoBehaviour
     public Sprite poussinD;
     public Sprite snakeFoodSprite;
 
-    public AudioClip chickenMoves;
+    public SoundAudioClip[] soundAudioClips;
+
+    [Serializable]
+    public class SoundAudioClip
+    {
+        public SoundsManager.Sound sound;
+        public AudioClip audioClip;
+    }
 }

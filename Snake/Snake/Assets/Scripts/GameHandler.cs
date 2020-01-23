@@ -23,7 +23,7 @@ public class GameHandler : MonoBehaviour
 
     private void Start()
     {
-        levelGrid = new LevelGrid(35, 20);
+        levelGrid = new LevelGrid(35, 24);
 
         snake.Setup(levelGrid);
         levelGrid.Setup(snake);
@@ -47,6 +47,7 @@ public class GameHandler : MonoBehaviour
     public static void SnakeDied()
     {
         Score.updateHighscore(score);
+        instance.transform.Find("Main Camera").GetComponent<AudioSource>().Stop();
         GameOverWindow.ShowStatic();
     }
 

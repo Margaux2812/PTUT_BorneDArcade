@@ -114,6 +114,9 @@ public class SnakeMovement : MonoBehaviour
 
     private void changeAsset(Direction direction)
     {
+        //Play sound
+        SoundsManager.PlaySound(SoundsManager.Sound.Moves);
+
         switch (direction)
         {
             default:
@@ -138,8 +141,6 @@ public class SnakeMovement : MonoBehaviour
 
     private void HandleGridMovement()
     {
-        //Play sound
-        SoundsManager.PlaySound();
 
         //Vitesse change
         if (snakeBodySize == 5)
@@ -162,10 +163,10 @@ public class SnakeMovement : MonoBehaviour
             Vector2Int gridMovePositionVector;
             switch(gridMoveDirection){
                 default:
-                case Direction.Right : gridMovePositionVector = new Vector2Int(1, 0); break;
-                case Direction.Left  : gridMovePositionVector = new Vector2Int(-1, 0); break;
-                case Direction.Up    : gridMovePositionVector = new Vector2Int(0, 1); break;
-                case Direction.Down  : gridMovePositionVector = new Vector2Int(0, -1); break;
+                case Direction.Right : gridMovePositionVector = new Vector2Int(2, 0); break;
+                case Direction.Left  : gridMovePositionVector = new Vector2Int(-2, 0); break;
+                case Direction.Up    : gridMovePositionVector = new Vector2Int(0, 2); break;
+                case Direction.Down  : gridMovePositionVector = new Vector2Int(0, -2); break;
             }
 
             gridPosition += gridMovePositionVector;
@@ -183,6 +184,9 @@ public class SnakeMovement : MonoBehaviour
 
             if (snakeAte)
             {
+                //Play sound
+                SoundsManager.PlaySound(SoundsManager.Sound.gotEgg);
+
                 snakeBodySize++;
                 CreateSnakeBody();
             }
@@ -201,6 +205,8 @@ public class SnakeMovement : MonoBehaviour
                 if(gridPosition == snakeBodyPartPosition)
                 {
                     state = State.Dead;
+                    
+
                     GameHandler.SnakeDied();
                 }
             }
