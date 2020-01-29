@@ -28,16 +28,16 @@ public static class Score
         switch (index)
         {
             case 0:
-                return PlayerPrefs.GetString("highscorePseudo", "Baptiste");
+                return PlayerPrefs.GetString("highscorePseudo", "Utilisateur inconnu");
             case 1:
-                return PlayerPrefs.GetString("highscore2Pseudo", "Baptiste");
+                return PlayerPrefs.GetString("highscore2Pseudo", "Utilisateur inconnu");
             case 2:
-                return PlayerPrefs.GetString("highscore3Pseudo", "Baptiste");
+                return PlayerPrefs.GetString("highscore3Pseudo", "Utilisateur inconnu");
             case 3:
-                return PlayerPrefs.GetString("highscore4Pseudo", "Baptiste");
+                return PlayerPrefs.GetString("highscore4Pseudo", "Utilisateur inconnu");
             case 4:
-                return PlayerPrefs.GetString("highscore5Pseudo", "Baptiste");
-            default: return PlayerPrefs.GetString("highscorePseudo", "Baptiste");
+                return PlayerPrefs.GetString("highscore5Pseudo", "Utilisateur inconnu");
+            default: return PlayerPrefs.GetString("highscorePseudo", "Utilisateur inconnu");
         }
     }
 
@@ -72,10 +72,12 @@ public static class Score
                 break;
             default: break;
         }
+        PlayerPrefs.Save();
     }
 
-    public static void updateHighscore(int score)
+    public static void updateHighscore()
     {
+        int score = PlayerPrefs.GetInt("score", 0);
 
         int indexToSwitch = -1;
         for (int i = 0; i < 5; i++)
@@ -90,23 +92,53 @@ public static class Score
 
         if (indexToSwitch != -1)
         {
-            swap(indexToSwitch, score);
+            swap(indexToSwitch, score, PlayerPrefs.GetString("pseudo", "VOUS"));
         }
 
         PlayerPrefs.Save();
     }
 
-    public static void swap(int index, int newscore)
+    private static void changeVous(string pseudo)
+    {
+        for(int i=0; i<5; i++)
+        {
+            if(GetHighScorePseudo(i) == "VOUS")
+            {
+                SetHighScore(pseudo, i, GetHighScore(i));
+            }
+        }
+        GameOverWindow.ShowStaticUpdated();
+    }
+
+    public static void setPseudo(string pseudo)
+    {
+        PlayerPrefs.SetString("pseudo", pseudo);
+        changeVous(pseudo);
+        PlayerPrefs.Save();
+    }
+
+    public static void setScore(int score)
+    {
+        PlayerPrefs.SetInt("score", score);
+        PlayerPrefs.SetString("pseudo", "VOUS");
+        PlayerPrefs.Save();
+    }
+
+    public static void swap(int index, int newscore, string pseudo)
     {
         int lastScore = GetHighScore(index);
-        SetHighScore("Margaux", index, newscore);
+        string lastPseudo = GetHighScorePseudo(index);
+        SetHighScore(pseudo, index, newscore);
         int tmp;
+        string tmpPseudo;
 
         for (int i=index+1; i<5; i++)
         {
             tmp = GetHighScore(i);
-            SetHighScore("Margaux", i, lastScore);
+            tmpPseudo = GetHighScorePseudo(i);
+            SetHighScore(lastPseudo, i, lastScore);
             lastScore = tmp;
+            lastPseudo = tmpPseudo;
         }
     }
 
@@ -117,6 +149,13 @@ public static class Score
         PlayerPrefs.SetInt("highscore3", 0);
         PlayerPrefs.SetInt("highscore4", 0);
         PlayerPrefs.SetInt("highscore5", 0);
+
+        PlayerPrefs.SetString("highscorePseudo", ".....");
+        PlayerPrefs.SetString("highscore2Pseudo", ".....");
+        PlayerPrefs.SetString("highscore3Pseudo", ".....");
+        PlayerPrefs.SetString("highscore4Pseudo", ".....");
+        PlayerPrefs.SetString("highscore5Pseudo", ".....");
+
         PlayerPrefs.Save();
     }
 }

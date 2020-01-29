@@ -46,7 +46,6 @@ public class GameHandler : MonoBehaviour
 
     public static void SnakeDied()
     {
-        Score.updateHighscore(score);
         instance.transform.Find("Main Camera").GetComponent<AudioSource>().Stop();
         GameOverWindow.ShowStatic();
     }

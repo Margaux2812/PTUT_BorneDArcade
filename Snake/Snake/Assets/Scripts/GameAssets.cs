@@ -11,14 +11,10 @@ public class GameAssets : MonoBehaviour
     {
         instance = this;
     }
-    
-    public Animator Chick;
-
-    public Sprite poussinH;
-    public Sprite poussinB;
-    public Sprite poussinG;
-    public Sprite poussinD;
+  
     public Sprite snakeFoodSprite;
+
+    public Animator poussin;
 
     public SoundAudioClip[] soundAudioClips;
 

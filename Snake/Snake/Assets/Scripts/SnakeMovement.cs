@@ -32,6 +32,11 @@ public class SnakeMovement : MonoBehaviour
     private State state;
     public Animator snakeBody;
 
+    bool canMove = true;
+    float coolDown;
+
+    public RuntimeAnimatorController poussin;
+
     public void Setup(LevelGrid levelGrid)
     {
         this.levelGrid = levelGrid;
@@ -41,6 +46,7 @@ public class SnakeMovement : MonoBehaviour
     {
         gridPosition = new Vector2Int(10, 10);
         gridMoveTimerMax = .2f;
+        coolDown = gridMoveTimerMax;
         gridMoveTimer = gridMoveTimerMax;
         gridMoveDirection = Direction.Right;
 
@@ -72,44 +78,60 @@ public class SnakeMovement : MonoBehaviour
         Event e = Event.current;
         if (e.isKey)
         {
-            Debug.Log("Detected key code: " + e.keyCode);
+            //Debug.Log("Detected key code: " + e.keyCode);
         }
     }
 
     private void HandleEvent()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (canMove)
         {
-            if (gridMoveDirection != Direction.Down)
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                gridMoveDirection = Direction.Up;
-                changeAsset(Direction.Up);
+                if (gridMoveDirection != Direction.Down)
+                {
+                    canMove = false;
+                    Invoke("CooledDown", coolDown);
+                    gridMoveDirection = Direction.Up;
+                    changeAsset(Direction.Up);
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                if (gridMoveDirection != Direction.Up)
+                {
+                    canMove = false;
+                    Invoke("CooledDown", coolDown);
+                    gridMoveDirection = Direction.Down;
+                    changeAsset(Direction.Down);
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                if (gridMoveDirection != Direction.Right)
+                {
+                    canMove = false;
+                    Invoke("CooledDown", coolDown);
+                    gridMoveDirection = Direction.Left;
+                    changeAsset(Direction.Left);
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                if (gridMoveDirection != Direction.Left)
+                {
+                    canMove = false;
+                    Invoke("CooledDown", coolDown);
+                    gridMoveDirection = Direction.Right;
+                    changeAsset(Direction.Right);
+                }
             }
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            if (gridMoveDirection != Direction.Up)
-            {
-                gridMoveDirection = Direction.Down;
-                changeAsset(Direction.Down);
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            if (gridMoveDirection != Direction.Right)
-            {
-                gridMoveDirection = Direction.Left;
-                changeAsset(Direction.Left);
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            if (gridMoveDirection != Direction.Left)
-            {
-                gridMoveDirection = Direction.Right;
-                changeAsset(Direction.Right);
-            }
-        }
+    }
+
+    private void CooledDown()
+    {
+        canMove = true;
     }
 
     private void changeAsset(Direction direction)
@@ -143,14 +165,22 @@ public class SnakeMovement : MonoBehaviour
     {
 
         //Vitesse change
-        if (snakeBodySize == 5)
-        {
-            gridMoveTimerMax = .15f;
-        }
         if (snakeBodySize == 10)
         {
+            coolDown = gridMoveTimerMax;
+            gridMoveTimerMax = .15f;
+        }
+        if (snakeBodySize == 20)
+        {
+            coolDown = gridMoveTimerMax;
             gridMoveTimerMax = .1f;
         }
+        if (snakeBodySize == 30)
+        {
+            coolDown = gridMoveTimerMax;
+            gridMoveTimerMax = .06f;
+        }
+
 
         gridMoveTimer += Time.deltaTime;
         if (gridMoveTimer >= gridMoveTimerMax)
@@ -227,7 +257,7 @@ public class SnakeMovement : MonoBehaviour
 
     private void CreateSnakeBody()
     {
-        snakeBodyParts.Add(new SnakeBodyPart(snakeBodyParts.Count));
+        snakeBodyParts.Add(new SnakeBodyPart(snakeBodyParts.Count, this));
     }
 
     private void UpdateSnakeBodyParts()
@@ -242,15 +272,17 @@ public class SnakeMovement : MonoBehaviour
     {
         private SnakeMovePosition gridPosition;
         private Transform transform;
-        //private Animator snakeBody;
         private GameObject snakeBody;
 
-        public SnakeBodyPart(int index)
+        public SnakeBodyPart(int index, SnakeMovement chicken)
         {
-            snakeBody = new GameObject("SnakeBoy", typeof(SpriteRenderer));
-            snakeBody.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.poussinD;//GameAssets.instance.GetComponent<Animator>();
-            //snakeBody.SetFloat("Horizontal", 1);
-            //snakeBody.SetFloat("Vertical", 0);
+            snakeBody = new GameObject("Poussin", typeof(SpriteRenderer));
+            snakeBody.AddComponent<Animator>();
+            snakeBody.GetComponent<Animator>().runtimeAnimatorController = chicken.poussin as RuntimeAnimatorController;
+            snakeBody.GetComponent<Animator>().updateMode = AnimatorUpdateMode.AnimatePhysics; 
+            //snakeBody.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.poussinD;
+            snakeBody.GetComponent<Animator>().SetFloat("Horizontal", 1);
+            snakeBody.GetComponent<Animator>().SetFloat("Vertical", 0);
             transform = snakeBody.transform;
         }
 
@@ -258,7 +290,7 @@ public class SnakeMovement : MonoBehaviour
         {
             this.gridPosition = position;
             transform.position = new Vector3(position.GetGridPosition().x, position.GetGridPosition().y, 0);
-            changeAsset(gridPosition.GetDirection());
+            changeAssetAnimator(gridPosition.GetDirection());
         }
 
         public Vector2Int GetPosition()
@@ -266,22 +298,26 @@ public class SnakeMovement : MonoBehaviour
             return gridPosition.GetGridPosition();
         }
 
-        public void changeAsset(Direction direction)
+        public void changeAssetAnimator(Direction direction)
         {
             switch (direction)
             {
                 default:
                 case Direction.Up:
-                    snakeBody.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.poussinH;
+                    snakeBody.GetComponent<Animator>().SetFloat("Horizontal", 0);
+                    snakeBody.GetComponent<Animator>().SetFloat("Vertical", 1);
                     break;
                 case Direction.Down: //Down
-                    snakeBody.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.poussinB;
+                    snakeBody.GetComponent<Animator>().SetFloat("Horizontal", 0);
+                    snakeBody.GetComponent<Animator>().SetFloat("Vertical", -1);
                     break;
                 case Direction.Right: //Right
-                    snakeBody.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.poussinD;
+                    snakeBody.GetComponent<Animator>().SetFloat("Horizontal", 1);
+                    snakeBody.GetComponent<Animator>().SetFloat("Vertical", 0);
                     break;
                 case Direction.Left: //Left
-                    snakeBody.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.poussinG;
+                    snakeBody.GetComponent<Animator>().SetFloat("Horizontal", -1);
+                    snakeBody.GetComponent<Animator>().SetFloat("Vertical", 0);
                     break;
             }
         }
