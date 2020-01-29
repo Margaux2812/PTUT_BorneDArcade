@@ -30,7 +30,7 @@ public class GameOverWindow : MonoBehaviour
         };
 
         transform.Find("Retour").GetComponent<Button_UI>().ClickFunc = () => {
-            Loader.Load(Loader.Scene.MenuScene);
+            Loader.Load(Loader.Scene.MenuSceneSnake);
         };
 
         Hide();
