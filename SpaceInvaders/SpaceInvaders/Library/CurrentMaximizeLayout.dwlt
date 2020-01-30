@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 678, y: 613}
   m_MaxSize: {x: 14001, y: 18063}
   vertical: 0
-  controlID: 168
+  controlID: 170
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,7 +221,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 6efbffff
+      m_ExpandedIDs: 6efbffff4c3600000837000058370000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -334,9 +334,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -0.81496245, y: -0.5112719, z: -36.36328}
+    m_Target: {x: 3.8327994, y: -2.2101219, z: -53.461376}
     speed: 2
-    m_Value: {x: -0.81496245, y: -0.5112719, z: -36.36328}
+    m_Value: {x: 3.8327994, y: -2.2101219, z: -53.461376}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -386,9 +386,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 15.176386
+    m_Target: 13.660479
     speed: 2
-    m_Value: 15.176386
+    m_Value: 13.660479
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -580,10 +580,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: 5005ca68e902c204595403b2e9861fc9,
+  m_AnimatorController: {fileID: 9100000, guid: 0ed4783d46a75c942ae37e3dc34d2e17,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 1107333525210726290, guid: 5005ca68e902c204595403b2e9861fc9,
+  - m_Target: {fileID: 1107532883800559958, guid: 0ed4783d46a75c942ae37e3dc34d2e17,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -669,7 +669,7 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\OryBa\Desktop\SpaceInvaders
+  m_LastProjectPath: C:\Users\OryBa\Desktop\PTUT_BorneDArcade\SpaceInvaders\SpaceInvaders
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
