@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{81D0752A-4051-D4BE-0B49-F8D12D7CF1A4}</ProjectGuid>
+    <ProjectGuid>{435C8792-8CED-684F-1777-1C6A741F16E3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -84,73 +84,72 @@
     <Compile Include="Assets\Scripts\SpaceInvaders\EnemyController.cs" />
     <Compile Include="Assets\Scripts\SpaceInvaders\EnemyExplosion.cs" />
     <Compile Include="Assets\Scripts\SpaceInvaders\Game.cs" />
-    <Compile Include="Assets\Scripts\SpaceInvaders\GameOverWindow.cs" />
+    <Compile Include="Assets\Scripts\SpaceInvaders\GameOverSI.cs" />
     <Compile Include="Assets\Scripts\SpaceInvaders\LivesSlots.cs" />
     <Compile Include="Assets\Scripts\SpaceInvaders\Loader.cs" />
     <Compile Include="Assets\Scripts\SpaceInvaders\LoaderCallback.cs" />
-    <Compile Include="Assets\Scripts\SpaceInvaders\MainMenuScript.cs" />
-    <Compile Include="Assets\Scripts\SpaceInvaders\MenuAll.cs" />
+    <Compile Include="Assets\Scripts\SpaceInvaders\MainMenuSI.cs" />
     <Compile Include="Assets\Scripts\SpaceInvaders\PlayerBullet.cs" />
     <Compile Include="Assets\Scripts\SpaceInvaders\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\SpaceInvaders\ScoreSpaceInvaders.cs" />
+    <Compile Include="Assets\Scripts\SpaceInvaders\ScoreSI.cs" />
     <Compile Include="Assets\Scripts\SpaceInvaders\Wave.cs" />
     <None Include="Assets\CodeMonkey\README.txt" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-weaver.Editor">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -324,13 +323,13 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/PackageCache/com.unity.analytics@3.3.5/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/OryBa/Desktop/BA_SpaceInvaders_U/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/OryBa/Desktop/PTUT_BorneDArcade/SpaceInvaders/SpaceInvaders/Library/PackageCache/com.unity.analytics@3.3.5/AnalyticsStandardEvents/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.0f6/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

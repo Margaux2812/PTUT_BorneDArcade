@@ -60,7 +60,7 @@ public class Game : MonoBehaviour
         txtLevel = GameObject.Find("TxtLevel").GetComponent<Text>();
         txtScore = GameObject.Find("TxtScore").GetComponent<Text>();
         txtHighScore = GameObject.Find("TxtHighScore").GetComponent<Text>();
-        txtHighScore.text = "High-score < " + ScoreSpaceInvaders.GetHighScore(0).ToString() + " >";
+        txtHighScore.text = "High-score < " + ScoreSI.GetHighScore(0).ToString() + " >";
     }
 
     //Lose level of the game (-1 life)
@@ -92,7 +92,7 @@ public class Game : MonoBehaviour
     {
         audiosource.Stop();
         audiosource.PlayOneShot(audioClip[1]);
-        GameOverWindow.ShowStatic();
+        GameOverSI.ShowStatic();
     }
 
     //Restart game

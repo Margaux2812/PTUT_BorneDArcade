@@ -43,6 +43,7 @@ public class PlayerBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("BulletEnemy"))
         {
             Destroy(collision.gameObject);
+            Instantiate(enemyExplosionPrefab, collision.transform.position, Quaternion.identity);
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<BoxCollider2D>().enabled = false;
             game.ScoreGame += 10;
