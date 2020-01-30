@@ -41,10 +41,12 @@ public class GameOverWindow : MonoBehaviour
         //Play sound
         SoundsManager.PlaySound(SoundsManager.Sound.gameOver);
 
+        float score = GameHandler.GetScore() + ((float)GameHandler.GetScore() / GameHandler.GetTime());
+
         //Load le score actuel
-        transform.Find("scoreobtenu").GetComponent<Text>().text = "VOUS AVEZ EU " + GameHandler.GetScore().ToString();
+        transform.Find("scoreobtenu").GetComponent<Text>().text = "VOUS AVEZ EU " + (int)score;
         //Donner le score
-        Score.setScore(GameHandler.GetScore());
+        Score.setScore((int)(GameHandler.GetScore() + ((float)GameHandler.GetScore() / GameHandler.GetTime())));
         //Update le tableau
         Score.updateHighscore();
 

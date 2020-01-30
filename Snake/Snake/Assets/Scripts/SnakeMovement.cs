@@ -31,6 +31,7 @@ public class SnakeMovement : MonoBehaviour
     private List<SnakeBodyPart> snakeBodyParts;
     private State state;
     public Animator snakeBody;
+    public float timer;
 
     bool canMove = true;
     float coolDown;
@@ -58,6 +59,11 @@ public class SnakeMovement : MonoBehaviour
         snakeBody.SetFloat("Vertical", 0);
 
         state = State.Alive;
+
+        if (GameHandler.isSpecialMode())
+        {
+            easter_egg.changeAssetsToEaster(this);
+        }
     }
 
     private void Update()
@@ -71,15 +77,8 @@ public class SnakeMovement : MonoBehaviour
             case State.Dead:
                 break;
         }
-    }
-
-    private void OnGUI()
-    {
-        Event e = Event.current;
-        if (e.isKey)
-        {
-            //Debug.Log("Detected key code: " + e.keyCode);
-        }
+        timer += Time.deltaTime;
+        GameHandler.SetTime(timer);
     }
 
     private void HandleEvent()
@@ -235,8 +234,6 @@ public class SnakeMovement : MonoBehaviour
                 if(gridPosition == snakeBodyPartPosition)
                 {
                     state = State.Dead;
-                    
-
                     GameHandler.SnakeDied();
                 }
             }
@@ -280,7 +277,6 @@ public class SnakeMovement : MonoBehaviour
             snakeBody.AddComponent<Animator>();
             snakeBody.GetComponent<Animator>().runtimeAnimatorController = chicken.poussin as RuntimeAnimatorController;
             snakeBody.GetComponent<Animator>().updateMode = AnimatorUpdateMode.AnimatePhysics; 
-            //snakeBody.GetComponent<SpriteRenderer>().sprite = GameAssets.instance.poussinD;
             snakeBody.GetComponent<Animator>().SetFloat("Horizontal", 1);
             snakeBody.GetComponent<Animator>().SetFloat("Vertical", 0);
             transform = snakeBody.transform;

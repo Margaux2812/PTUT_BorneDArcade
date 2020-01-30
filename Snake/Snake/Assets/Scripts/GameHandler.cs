@@ -9,6 +9,8 @@ public class GameHandler : MonoBehaviour
     private static GameHandler instance;
 
     private static int score;
+    private static float timer;
+    private static bool easterEgg;
     [SerializeField] private SnakeMovement snake;
 
     private LevelGrid levelGrid;
@@ -37,6 +39,21 @@ public class GameHandler : MonoBehaviour
     public static int GetScore()
     {
         return score;
+    }
+
+    public static bool isSpecialMode()
+    {
+        return easterEgg;
+    }
+
+    public static float GetTime()
+    {
+        return timer;
+    }
+
+    public static void SetTime(float time)
+    {
+        timer = time;
     }
 
     public static void AddScore()
