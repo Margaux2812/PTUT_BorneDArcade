@@ -6,39 +6,43 @@ using UnityEngine.UI;
 
 public class GameOverSI : MonoBehaviour
 {
-    private Game game;
     public InputField pseudo;
     private static GameOverSI instance;
+    private Game game;
 
     public void SetGetInput()
     {
-        if(pseudo.text == "")
+        if (pseudo.text == "")
         {
             ScoreSI.SetPseudo("Utilisateur");
         }
-        else {
+        else
+        {
             ScoreSI.SetPseudo(pseudo.text);
         }
-       
     }
 
     private void Awake()
     {
-        game = GameObject.Find("EventSystem").GetComponent<Game>();
         instance = this;
+
         transform.Find("ButtonRetry").GetComponent<Button_UI>().ClickFunc = () => {
             Loader.Load(Loader.Scene.GameScene_SpaceInvaders);
         };
         transform.Find("ButtonReturn").GetComponent<Button_UI>().ClickFunc = () => {
-            Loader.Load(Loader.Scene.MenuScene_SpaceInvaders);
+            Loader.Load(Loader.Scene.GameScene_SpaceInvaders);
         };
+        game = GameObject.Find("EventSystem").GetComponent<Game>();
+
         Hide();
     }
 
     private void Show()
     {
+        float score = game.ScoreGame;
+
         //Load current score
-        transform.Find("TxtScoreObtained").GetComponent<Text>().text = "VOUS AVEZ EU " + game.ScoreGame;
+        transform.Find("TxtScoreObtained").GetComponent<Text>().text = "VOUS AVEZ EU " + (int)score;
         
         //Give score
         ScoreSI.SetScore(game.ScoreGame);
@@ -52,12 +56,14 @@ public class GameOverSI : MonoBehaviour
         {
             highscore += "\n" + ScoreSI.GetHighScore(i).ToString();
         }
+
         transform.Find("TxtScore").GetComponent<Text>().text = highscore;
         string highscorePseudo = ScoreSI.GetHighScorePseudo().ToString();
         for (int i = 1; i < 5; i++)
         {
             highscorePseudo += "\n" + ScoreSI.GetHighScorePseudo(i).ToString();
         }
+
         transform.Find("TxtPseudo").GetComponent<Text>().text = highscorePseudo;
 
         gameObject.SetActive(true);
@@ -67,19 +73,22 @@ public class GameOverSI : MonoBehaviour
     {
         //Load current score
         transform.Find("TxtScoreObtained").GetComponent<Text>().text = "VOUS AVEZ EU " + game.ScoreGame;
-        
+
         //Load highscore
         string highscore = ScoreSI.GetHighScore().ToString();
         for (int i = 1; i < 5; i++)
         {
             highscore += "\n" + ScoreSI.GetHighScore(i).ToString();
         }
+
         transform.Find("TxtScore").GetComponent<Text>().text = highscore;
+
         string highscorePseudo = ScoreSI.GetHighScorePseudo().ToString();
         for (int i = 1; i < 5; i++)
         {
             highscorePseudo += "\n" + ScoreSI.GetHighScorePseudo(i).ToString();
         }
+
         transform.Find("TxtPseudo").GetComponent<Text>().text = highscorePseudo;
     }
 

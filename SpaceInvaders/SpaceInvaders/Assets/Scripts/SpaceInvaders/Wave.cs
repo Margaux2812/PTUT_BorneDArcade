@@ -17,12 +17,12 @@ public class Wave : MonoBehaviour
 	//Wave enemies
 	[SerializeField] public GameObject[] enemyType;
 	private float spaceColumns = 1f, spaceRows = 1.4f;
-	private int nbEnemiesLine = 5;
+	private int nbEnemiesLine = 4;
 	private int totalEnemies;
 	public int remainingEnemies;
 
 	//Sound
-	[SerializeField] private AudioClip[] audioClip;
+	[SerializeField] private AudioClip[] audioClip = null;
 	private AudioSource audiosource;
 
 	private void Awake()
@@ -104,7 +104,11 @@ public class Wave : MonoBehaviour
 		{
 			if(level != 3)
 			{
-				waveSpeedBoss /= 1.3f;
+				waveSpeedBoss /= 1.2f;
+			}
+			if (waveSpeedBoss < 0.1f)
+			{
+				waveSpeedEnemies = 0.1f;
 			}
 			waveSpeed = waveSpeedBoss;
 			GameObject enemy = Instantiate(enemyType[3].gameObject, new Vector2(transform.position.x + 0.4f, transform.position.y), Quaternion.identity);
@@ -114,10 +118,14 @@ public class Wave : MonoBehaviour
 		{
 			if (nbEnemiesType == 0 && level != 0)
 			{
-				waveSpeedEnemies /= 1.3f;
-				if(nbEnemiesLine < 12)
+				waveSpeedEnemies /= 1.2f;
+				if(nbEnemiesLine < 10)
 				{
 					nbEnemiesLine += 1;
+				}
+				if (waveSpeedEnemies < 0.2f)
+				{
+					waveSpeedEnemies = 0.2f;
 				}
 			}
 			waveSpeed = waveSpeedEnemies;

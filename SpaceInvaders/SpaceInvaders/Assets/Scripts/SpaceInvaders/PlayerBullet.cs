@@ -14,8 +14,8 @@ public class PlayerBullet : MonoBehaviour
     private Rigidbody2D playerBulletRb;
 
     //Animation
-    [SerializeField] private GameObject enemyExplosionPrefab;
-    [SerializeField] private GameObject bossExplosionPrefab;
+    [SerializeField] private GameObject enemyExplosionPrefab = null;
+    [SerializeField] private GameObject bossExplosionPrefab = null;
 
     private void Awake()
     {

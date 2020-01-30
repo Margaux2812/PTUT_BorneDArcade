@@ -20,7 +20,7 @@ public class Game : MonoBehaviour
     private float delayPhase = 3f;
 
     //Sound
-    [SerializeField] private AudioClip[] audioClip;
+    [SerializeField] private AudioClip[] audioClip = null;
     private AudioSource audiosource;
 
     //GS Score

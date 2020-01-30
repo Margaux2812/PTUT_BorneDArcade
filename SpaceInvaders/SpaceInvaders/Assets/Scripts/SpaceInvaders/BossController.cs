@@ -8,7 +8,7 @@ public class BossController : EnemyController
     private int bossLives = 9;
 
     //Sound
-    [SerializeField] private AudioClip[] audioClip;
+    [SerializeField] private AudioClip[] audioClip = null;
     private AudioSource audiosource;
 
     public int BossLives

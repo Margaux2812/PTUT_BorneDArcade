@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private bool playerCanMove = true;
 
     //Player shoot
-    [SerializeField] private GameObject playerBullet;
+    [SerializeField] private GameObject playerBullet = null;
     private Transform ejectPosition;
     public bool playerCanShoot = true;
 
