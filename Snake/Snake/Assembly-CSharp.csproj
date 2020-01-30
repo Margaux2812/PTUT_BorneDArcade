@@ -77,6 +77,10 @@
     <Compile Include="Assets\CodeMonkey\Utils\UtilsClass.cs" />
     <Compile Include="Assets\CodeMonkey\Utils\World_Bar.cs" />
     <Compile Include="Assets\CodeMonkey\Utils\World_Sprite.cs" />
+    <Compile Include="Assets\Script\BoolFlag.cs" />
+    <Compile Include="Assets\Script\ButtonSelect.cs" />
+    <Compile Include="Assets\Script\RankingButton.cs" />
+    <Compile Include="Assets\Script\TextEffect1.cs" />
     <Compile Include="Assets\Scripts\GameAssets.cs" />
     <Compile Include="Assets\Scripts\GameHandler.cs" />
     <Compile Include="Assets\Scripts\GameOverWindow.cs" />

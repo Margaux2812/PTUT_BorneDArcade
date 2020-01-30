@@ -12,8 +12,9 @@ public class MainMenuScript : MonoBehaviour
         transform.Find("mainSubMenu").GetComponent<RectTransform>().anchoredPosition = Vector2.zero;
 
         /*Boutons menu principal*/
-        transform.Find("mainSubMenu").Find("playButton").GetComponent<Button_UI>().ClickFunc = () => { Loader.Load(Loader.Scene.GameScene);  };
-        transform.Find("mainSubMenu").Find("quitButton").GetComponent<Button_UI>().ClickFunc = () => { Loader.Load(Loader.Scene.MenuPrincipal);  }; //Application.Quit();
+        //transform.Find("FirstScreen").Find("Button").Find("Snake").GetComponent<Button>().ClickFunc = () => { Loader.Load(Loader.Scene.GameScene);  };
+        transform.Find("mainSubMenu").Find("playButton").GetComponent<Button_UI>().ClickFunc = () => { Loader.Load(Loader.Scene.GameScene); };
+        transform.Find("mainSubMenu").Find("quitButton").GetComponent<Button_UI>().ClickFunc = () => { Loader.Load(Loader.Scene.MenuGeneral);  }; //Application.Quit();
 
         transform.Find("mainSubMenu").Find("highscore").GetComponent<Text>().text = "HIGHSCORE : " + Score.GetHighScore(0).ToString();
 

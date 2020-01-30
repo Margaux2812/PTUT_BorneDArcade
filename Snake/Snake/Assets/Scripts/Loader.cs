@@ -11,7 +11,7 @@ public static class Loader
         GameScene,
         LoadingScene,
         MenuSceneSnake,
-        MenuPrincipal
+        MenuGeneral
     }
 
     private static Action loaderCallbackAction;

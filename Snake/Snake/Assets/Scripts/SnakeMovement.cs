@@ -85,7 +85,7 @@ public class SnakeMovement : MonoBehaviour
     {
         if (canMove)
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetAxis("Vertical") > 0)
             {
                 if (gridMoveDirection != Direction.Down)
                 {
@@ -95,7 +95,7 @@ public class SnakeMovement : MonoBehaviour
                     changeAsset(Direction.Up);
                 }
             }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
+            if (Input.GetAxis("Vertical") < 0)
             {
                 if (gridMoveDirection != Direction.Up)
                 {
@@ -105,7 +105,7 @@ public class SnakeMovement : MonoBehaviour
                     changeAsset(Direction.Down);
                 }
             }
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetAxis("Horizontal") < 0)
             {
                 if (gridMoveDirection != Direction.Right)
                 {
@@ -115,7 +115,7 @@ public class SnakeMovement : MonoBehaviour
                     changeAsset(Direction.Left);
                 }
             }
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetAxis("Horizontal") > 0)
             {
                 if (gridMoveDirection != Direction.Left)
                 {
