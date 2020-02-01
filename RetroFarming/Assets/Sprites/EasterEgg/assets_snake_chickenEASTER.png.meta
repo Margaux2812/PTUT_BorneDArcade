@@ -1,0 +1,511 @@
+fileFormatVersion: 2
+guid: 8843c76d8d9da024bae34d0631c1ad5c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3336269387893237946
+    second: assets_snake_chickenEASTER_0
+  - first:
+      213: -1341871362980605259
+    second: assets_snake_chickenEASTER_1
+  - first:
+      213: -838341841557342972
+    second: assets_snake_chickenEASTER_2
+  - first:
+      213: -5676883419081763089
+    second: assets_snake_chickenEASTER_3
+  - first:
+      213: 7773725421283474845
+    second: assets_snake_chickenEASTER_4
+  - first:
+      213: -5802192942080260257
+    second: assets_snake_chickenEASTER_5
+  - first:
+      213: -3148456135628371223
+    second: assets_snake_chickenEASTER_6
+  - first:
+      213: -83487799947069172
+    second: assets_snake_chickenEASTER_7
+  - first:
+      213: -5687317634541603987
+    second: assets_snake_chickenEASTER_8
+  - first:
+      213: -4941955772354452333
+    second: assets_snake_chickenEASTER_9
+  - first:
+      213: 661501910562899143
+    second: assets_snake_chickenEASTER_10
+  - first:
+      213: 7761188742270326460
+    second: assets_snake_chickenEASTER_11
+  - first:
+      213: 8580218048545658543
+    second: assets_snake_chickenEASTER_12
+  - first:
+      213: -4196511287611672352
+    second: assets_snake_chickenEASTER_13
+  - first:
+      213: -4293314907061228992
+    second: assets_snake_chickenEASTER_14
+  - first:
+      213: 679955977711062387
+    second: assets_snake_chickenEASTER_15
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 70
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 817
+        width: 154
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8e26cf45fcc4e20800000000000000
+      internalID: 3336269387893237946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_1
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 817
+        width: 154
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2954bda17b06de0800000000000000
+      internalID: -1341871362980605259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_2
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 817
+        width: 142
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405b0ad698c9d54f0800000000000000
+      internalID: -838341841557342972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_3
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 817
+        width: 154
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe693569b98a731b0800000000000000
+      internalID: -5676883419081763089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 528
+        width: 91
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d760d6512d1eb60800000000000000
+      internalID: 7773725421283474845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_5
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 528
+        width: 90
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f570701b2487a7fa0800000000000000
+      internalID: -5802192942080260257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_6
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 528
+        width: 90
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eac8fc63df6e44d0800000000000000
+      internalID: -3148456135628371223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_7
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 528
+        width: 91
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09731dc94467def0800000000000000
+      internalID: -83487799947069172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_8
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 281
+        width: 154
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63355c7eb69211b0800000000000000
+      internalID: -5687317634541603987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_9
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 281
+        width: 154
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3942f1d9865aa6bb0800000000000000
+      internalID: -4941955772354452333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_10
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 281
+        width: 141
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c4085d9b702e2900800000000000000
+      internalID: 661501910562899143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_11
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 281
+        width: 154
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb698c16a0845bb60800000000000000
+      internalID: 7761188742270326460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_12
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 26
+        width: 91
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa695feeade031770800000000000000
+      internalID: 8580218048545658543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_13
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 28
+        width: 90
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e83dfdc73ff2c5c0800000000000000
+      internalID: -4196511287611672352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_14
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 26
+        width: 90
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ae9b7c6d41b64c0800000000000000
+      internalID: -4293314907061228992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: assets_snake_chickenEASTER_15
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 28
+        width: 91
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d0f52fb50bf6900800000000000000
+      internalID: 679955977711062387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
